@@ -17,7 +17,7 @@ window.users = Object.keys(streams.users);
 var addTweet = function(newTweet){
   var username = newTweet.user;
   streams.users[username].push(newTweet);
-  streams.home.push(newTweet);
+  streams.home.push(newTweet); //the new tweet (which is an object) is pushed into the streams.home array
 };
 
 // utility function

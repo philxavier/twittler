@@ -2,26 +2,16 @@
 <html>
   <head>
     <script src="jquery.js"></script>
+    <script src="script.js"></script>
     <script src="data_generator.js"></script>
+    <script src= https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.3/jquery.timeago.js></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <script>
+    <div id = 'btn-container'>
+      <button type="button" class="btn">Get Tweets</button >
+    </div>
+    <div id = "tweetContainer"></div>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
-
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
-
-      });
-
-    </script>
   </body>
 </html>
